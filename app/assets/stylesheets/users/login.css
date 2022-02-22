@@ -1,0 +1,21 @@
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-blue-btn {
+  background: #00d9ff;
+  border: 1px solid #0051ff;
+  width: 100%;
+  color: #fff;
+  line-height: 48px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+} 
