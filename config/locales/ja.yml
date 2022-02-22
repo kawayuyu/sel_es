@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        birthday: 生年月日
+        Include both letters and numbers: は文字と数字を両方を入力してください

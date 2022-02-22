@@ -47,9 +47,9 @@
     <div class='input-birth-wrap'>
       <%= raw sprintf(
                   f.date_select(
-                    :birthdate,
+                    :birthday,
                     class:'select-birth',
-                    id:"birth-date",
+                    id:"birth-day",
                     use_month_numbers: true,
                     prompt:'--',
                     start_year: 1930,
@@ -69,5 +69,5 @@
 </div>
 <% end %>
 
-<%= render "shared/footer" %>
+<%#= render "shared/footer" %>
 </div>
