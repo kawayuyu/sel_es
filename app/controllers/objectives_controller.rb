@@ -1,10 +1,9 @@
 class ObjectivesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_objective, only: [:edit, :show]
+  before_action :set_objective, only: [:edit, :show, :destroy, :update]
 
   def index
-    # @objectives = Objective.all
-    @objectives = Objective.includes(:user).order('created_at DESC')
+    @objectives = current_user.objectives.all.order(created_at: :desc)
   end
 
   def new
@@ -21,16 +20,14 @@ class ObjectivesController < ApplicationController
   end
 
   def destroy
-    objective = Objective.find(params[:id])
-    objective.destroy
+    @objective.destroy
   end
 
   def edit
   end
 
   def update
-    objective = Objective.find(params[:id])
-    objective.update(objective_params)
+    @objective.update(objective_params)
   end
 
   def show
@@ -43,6 +40,6 @@ class ObjectivesController < ApplicationController
   end
 
   def set_objective
-    @objective = Objective.find(params[:id])
+    @objective = current_user.objectives.find(params[:id])
   end
 end
