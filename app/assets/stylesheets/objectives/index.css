@@ -1,0 +1,174 @@
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+select {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
+  *zoom: 1;
+}
+
+body {
+  padding-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  color: #57C3E9;
+}
+
+
+
+div.contents.row div.content_post {
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  min-height: 80%;
+  color:#333333;
+  word-wrap: break-word;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.contents.row div.content_post .more {
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  right: 30px;
+  z-index: 2;
+  height: 00px;
+  width: 80px;
+  text-align: right;
+}
+
+div.contents.row div.content_post p {
+  left: 30px;
+  right: 100px;
+  bottom: 30px;
+  margin: 0;
+  font-size: 20px;
+  z-index: 2;
+}
+
+div.contents.row div.content_post span.name {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 2;
+  font-size: 13px;
+}
+
+div.contents.row div.content_post span.name a {
+  display: block;
+  color: #aaa;
+}
+
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+form input {
+  width: 30%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+form input[type="submit"] {
+  background-color: #57C3E9;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #006f97;
+}
+
+.container {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 200px;
+  box-sizing: border-box;
+}
+
+.index_new{
+  margin-top: 20px;
+}
+.btn.pen_icon{
+  width: 80px;
+  height: 80px;
+  margin: 20%;
+  text-align: center;
+  padding: 2px;
+}
+
+.overview_text{
+  list-style: none;
+  font-size: 25px;
+  color: rgb(1, 84, 117)
+}
+
+.overview_text_created_at{
+  list-style: none;
+}
+
+ .more_list{
+  list-style: none;
+ }
+
+ .objective-explain-box{
+   list-style: none;
+ }

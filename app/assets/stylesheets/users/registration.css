@@ -114,8 +114,8 @@
 }
 
 form input[type="submit"].register-btn-action {
-  background: #00d9ff;
-  border: 1px solid #0051ff;
+  background: #57C3E9;
+  border: 1px solid #57C3E9;
   width: 100%;
   color: #fff;
   line-height: 48px;
@@ -125,7 +125,7 @@ form input[type="submit"].register-btn-action {
 }
 
 form input[type="submit"].register-btn-action:hover {
-  background-color: hsl(216, 100%, 60%);
+  background-color: #006f97;
   color: #fff;
 }
 

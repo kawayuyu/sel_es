@@ -1,0 +1,35 @@
+<div class="contents row">
+    <div class="content_post" style="background-image: url(<%= asset_path('note.png') %>);"%>
+      <div class="more">
+        <ul class="more_list">
+          <li>
+            <%= link_to '編集', edit_objective_path(@objective.id), method: :get %>
+          </li>
+          <li>
+            <%= link_to '削除', objective_path(@objective.id), method: :delete %>
+          </li>
+        </ul>
+      </div>
+      <div >
+        <ul class="objective-explain-box">
+            <li><%= @objective.created_at.strftime('%Y/%m/%d') %>【<%= @objective.category.name %>】</li>
+            <br><br>
+            <li><b><%= @objective.title %></b></li>
+            <br><br>
+            <li>【願望（簡単すぎず難しすぎもしない。しかし重要であること。）】<br><%= safe_join(@objective.wish.split("\n"),tag(:br)) %></li>
+            <br><br>
+            <li>【結果（願望が叶った時の最高の結果による感情・状況・メリット）】<br><%= safe_join(@objective.outcome.split("\n"),tag(:br)) %></li>
+            <br><br>
+            <li>【障害（願望を叶えるために起こりうる障害）】<br><%= safe_join(@objective.obstacle.split("\n"),tag(:br)) %></li>
+            <br><br>
+            <li>【計画（障害に対する対処方法・回避方法）】<br><%= safe_join(@objective.plan.split("\n"),tag(:br)) %></li>
+            <br><br>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="contents row">
+<div class="success">
+  <%= link_to '目標一覧へ戻る', objectives_path, class: "btn" %>
+</div>
+</div>
