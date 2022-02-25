@@ -1,0 +1,11 @@
+<div class="contents row">
+  <div class="container">
+    <h3>編集する</h3>
+    <%= form_with(model: @rule, local: true) do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+      <%= f.text_area :if, placeholder: "（状況）◯◯が起こったら", rows: "10" %>
+      <%= f.text_area :then, placeholder: "（行動）◯◯をする", rows: "10" %>
+      <%= f.submit "更新する" %>
+    <% end %>
+  </div>
+</div> 
