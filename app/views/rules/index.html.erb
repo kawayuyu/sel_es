@@ -1,0 +1,30 @@
+<div class="contents row">
+<%= link_to '「習慣」if then プランニングを作成する', new_rule_path, class: "login" %>
+  <% @rules.each do |rule| %>
+    <div class="content_post" style="background-image: url(<%= asset_path('if.png') %>);"%>
+      <div class="more">
+        <span><%= image_tag 'menu.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '詳細', rule_path(rule.id), method: :get %>
+          </li>
+          <li>
+            <%= link_to '編集', edit_rule_path(rule.id), method: :get %>
+          </li>
+          <li>
+            <%= link_to '削除', rule_path(rule.id), method: :delete %>
+          </li>
+        </ul>
+      </div>
+      <div class="overview">
+      <ul>
+        <li class="overview_text_created_at"><%= rule.created_at.strftime('%Y/%m/%d') %>
+        <br>
+        <li class="overview_text"><%= link_to rule.if_1, rule_path(rule.id) %></li>
+        <br>
+        <li class="overview_text"><%= link_to rule.then_1, rule_path(rule.id) %></li>
+      </ul>
+      </div>
+    </div>
+  <% end %>
+</div>
