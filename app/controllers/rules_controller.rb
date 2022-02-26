@@ -36,7 +36,7 @@ class RulesController < ApplicationController
   private
 
   def rule_params
-    params.require(:rule).permit(:if, :then).merge(user_id: current_user.id)
+    params.require(:rule).permit(:if_1, :then_1).merge(user_id: current_user.id)
   end
 
   def set_rule

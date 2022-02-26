@@ -12,3 +12,6 @@ ja:
        outcome: 結果
        obstacle: 障害
        plan: 計画
+      rule: 
+       if_1: 状況
+       then_1: 行動
