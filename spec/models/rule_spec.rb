@@ -24,12 +24,12 @@ RSpec.describe Rule, type: :model do
       it '「状況」部分が空欄だと登録できない' do
         @rule.if_1 = nil
         @rule.valid?
-        expect(@rule.errors.full_messages).to include("状況を入力してください")
+        expect(@rule.errors.full_messages).to include('状況を入力してください')
       end
       it '「行動」部分が空欄だと登録できない' do
         @rule.then_1 = nil
         @rule.valid?
-        expect(@rule.errors.full_messages).to include("行動を入力してください")
+        expect(@rule.errors.full_messages).to include('行動を入力してください')
       end
     end
   end
