@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :objectives
   has_many :rules
+  has_many :successes
 
   with_options presence: true do
     validates :nickname, length: { maximum: 10 }

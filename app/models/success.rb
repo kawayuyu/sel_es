@@ -1,2 +1,10 @@
 class Success < ApplicationRecord
-end
+  class Rule < ApplicationRecord
+    belongs_to :user
+  
+    with_options presence: true do
+      validates :success
+    end
+
+  end
+  
