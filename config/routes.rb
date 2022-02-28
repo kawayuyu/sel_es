@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'homes/index'
   resources :objectives
   resources :rules
+  resources :successes,only: [:index, :new, :destroy]
 end
