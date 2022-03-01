@@ -1,0 +1,23 @@
+<div class="contents row">
+<%= link_to '成功体験を投稿する', new_success_path, class: "login" %>
+  <% @successes.each do |success| %>
+    <div class="content_post" style="background-image: url(<%= asset_path('success.png') %>);"%>
+      <div class="more">
+        <span><%= image_tag 'menu.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '削除', success_path(success.id), method: :delete %>
+          </li>
+        </ul>
+      </div>
+      <div class="overview">
+      <ul>
+        <li class="overview_text_created_at"><%= success.created_at.strftime('%Y/%m/%d') %>
+        <br>
+        <li class="overview_text"><%= success.post %></li>
+        <br>
+      </ul>
+      </div>
+    </div>
+  <% end %>
+</div>

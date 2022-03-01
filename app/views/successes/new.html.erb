@@ -1,0 +1,10 @@
+<div class="contents row">
+  <div class="container">
+    <h3>成功体験を投稿する</h3>
+    <%= form_with(model: @success, local: true) do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+      <%= f.text_area :post, placeholder: "（成功体験）◯◯ができた等", rows: "10" %>
+      <%= f.submit "投稿する" %>
+    <% end %>
+  </div>
+</div>

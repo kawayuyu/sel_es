@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2022_02_28_072506) do
 
   create_table "successes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.text "success", null: false
+    t.text "post", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_successes_on_user_id"

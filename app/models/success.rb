@@ -1,10 +1,5 @@
 class Success < ApplicationRecord
-  class Rule < ApplicationRecord
-    belongs_to :user
-  
-    with_options presence: true do
-      validates :success
-    end
+  belongs_to :user
 
-  end
-  
+  validates :post, presence: true
+end
