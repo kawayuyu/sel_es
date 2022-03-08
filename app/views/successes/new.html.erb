@@ -4,7 +4,7 @@
     <%= form_with(model: @success, local: true) do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
       <%= f.text_area :post, placeholder: "（成功体験）◯◯ができた等", rows: "10" %>
-      <%= f.submit "投稿する" %>
+      <%= f.submit "投稿する" , id: "submit" %>
     <% end %>
   </div>
 </div>
