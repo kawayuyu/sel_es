@@ -56,7 +56,6 @@
 | :-------- | :--------- | :----------------------------- |
 | user      | references | null: false, foreign_key: true |
 | success   | text       | null: false                    |
-| day       | date       | null: false                    |
 | status    | integer    | null: false                    |
 
 #### Association

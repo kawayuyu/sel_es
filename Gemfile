@@ -61,3 +61,6 @@ gem 'devise'
 gem 'pry-rails'
 gem 'rails-i18n'
 gem 'active_hash'
+gem "jquery-rails"
+gem 'kaminari'
+gem 'obscenity'

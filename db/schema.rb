@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_25_080713) do
+ActiveRecord::Schema.define(version: 2022_02_28_072506) do
 
   create_table "objectives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 2022_02_25_080713) do
     t.index ["user_id"], name: "index_rules_on_user_id"
   end
 
+  create_table "successes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.text "post", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_successes_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.date "birthday", null: false
@@ -50,4 +58,5 @@ ActiveRecord::Schema.define(version: 2022_02_25_080713) do
 
   add_foreign_key "objectives", "users"
   add_foreign_key "rules", "users"
+  add_foreign_key "successes", "users"
 end
